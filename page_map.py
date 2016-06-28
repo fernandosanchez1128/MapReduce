@@ -9,16 +9,14 @@ for line in sys.stdin:
     # split the line into words
     words = line.split()
     # increase counters
-    server =""
-    page = "" 
     index =0
+    server = ""
+    page = ""
     for word in words:
-		if (index==0):
-			server = word
-		if (index==4):
-			page = word
-	index = index + 1
-	
-	if (server=="edams.ksc.nasa.gov"):
+        if (index==0):
+            server = word
+        if (index==4):
+            page = word    
+        index = index + 1
+    if (server == "edams.ksc.nasa.gov"):
 		print '%s\t%s' % (page, 1)
-	 
